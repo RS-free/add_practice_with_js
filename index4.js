@@ -4,39 +4,41 @@
 //* Четным li указать красный фон, нечетным -- синим
 //Для выполнения задания используйте createElement
 
-// const ulEl = document.createElement('ol');
-// const inputEl = document.createElement('input');
-// const buttonAdd = document.createElement('button');
-// const buttonRemove = document.createElement('button');
+const refs = {
+    container: document.querySelector(".container"),
+};
+const ulEl = document.createElement("ol");
+const inputEl = document.createElement("input");
+const buttonAdd = document.createElement("button");
+const buttonRemove = document.createElement("button");
 
-// refs.container.append(inputEl, buttonAdd, buttonRemove, ulEl);
+refs.container.append(inputEl, buttonAdd, buttonRemove, ulEl);
 
-// buttonAdd.textContent = 'Add';
-// buttonAdd.classList.add('btn-add')
+buttonAdd.textContent = "Add";
+buttonAdd.classList.add("btn-add");
 
-// buttonRemove.textContent = 'Remove'
-// buttonRemove.classList.add('btn-remove')
+buttonRemove.textContent = "Remove";
+buttonRemove.classList.add("btn-remove");
 
-// const onAddButton = (e) => {
-//     const liEl = document.createElement('li');
-//     liEl.textContent = inputEl.value ? inputEl.value : 'nothing';
-//     ulEl.append(liEl);
+const onAddButton = (e) => {
+    const liEl = document.createElement("li");
+    liEl.textContent = inputEl.value ? inputEl.value : "nothing";
+    ulEl.append(liEl);
 
-//     const ulChildrenLength = ulEl.children.length;
-//     const isItemElEven = ulChildrenLength % 2 === 0;
+    const ulChildrenLength = ulEl.children.length;
+    const isItemElEven = ulChildrenLength % 2 === 0;
 
-//     liEl.classList.add(isItemElEven ? 'even' : 'odd');
-//     inputEl.value = '';
-// };
+    liEl.classList.add(isItemElEven ? "even" : "odd");
+    inputEl.value = "";
+};
 
-// const onButtonRemove = () => {
-//     if (!ulEl.hasChildNodes()) return
-//     ulEl.removeChild(ulEl.lastElementChild);
+const onButtonRemove = () => {
+    if (!ulEl.hasChildNodes()) return;
+    ulEl.removeChild(ulEl.lastElementChild);
+};
 
-// }
-
-// buttonAdd.addEventListener('click', onAddButton);
-// buttonRemove.addEventListener('click', onButtonRemove);
+buttonAdd.addEventListener("click", onAddButton);
+buttonRemove.addEventListener("click", onButtonRemove);
 
 //Создать небольшую игру:)
 // - Изначально на экране пользователя будет отображаться
@@ -84,42 +86,47 @@
 
 // generateForm();
 
-const refs = {
-  ship: document.querySelector('#ship'),
-  sea: document.querySelector('#sea'),
+// const refs = {
+//     ship: document.querySelector("#ship"),
+//     sea: document.querySelector("#sea"),
+// };
 
-}
+// refs.sea.addEventListener("click", onSeaClick);
 
-refs.sea.addEventListener('click', onSeaClick);
+// function onSeaClick(e) {
+//     const seaCords = this.getBoundingClientRect();
+//     console.log(e.clientY);
+//     console.log(seaCords.top);
+//     console.log(refs.sea.clientTop);
+//     refs.ship.style
 
-function onSeaClick(e) {
- 
-  const seaCords = this.getBoundingClientRect()
-  console.log(e.clientY);
-  console.log(seaCords.top);
-  console.log(refs.sea.clientTop);
-  // refs.ship.style
+//     const shipCoords = {
+//         top:
+//             e.clientY -
+//             seaCords.top -
+//             refs.sea.clientTop -
+//             refs.ship.clientHeight / 2,
+//         left:
+//             e.clientX -
+//             seaCords.left -
+//             refs.sea.clientLeft -
+//             refs.ship.clientLeft / 2,
+//     };
 
-  const shipCoords = {
-    top: e.clientY - seaCords.top - refs.sea.clientTop - refs.ship.clientHeight / 2,
-    left: e.clientX - seaCords.left - refs.sea.clientLeft - refs.ship.clientLeft / 2,
-  };
+//     console.log(shipCoords.top);
+//     console.log(shipCoords.left);
 
-  console.log(shipCoords.top);
-  console.log(shipCoords.left);
+//     if (shipCoords.top < 0) shipCoords.top = 0;
+//     if (shipCoords.left < 0) shipCoords.left = 0;
 
-  if (shipCoords.top < 0) shipCoords.top = 0;
-  if (shipCoords.left < 0) shipCoords.left = 0;
+//     if (shipCoords.left + refs.ship.clientWidth > refs.sea.clientWidth) {
+//         shipCoords.left = refs.sea.clientWidth - refs.ship.clientWidth;
+//     }
 
-  if (shipCoords.left + refs.ship.clientWidth > refs.sea.clientWidth) {
-    shipCoords.left = refs.sea.clientWidth - refs.ship.clientWidth
-  }
+//     if (shipCoords.top + refs.ship.clientHeight > refs.sea.clientHeight) {
+//         shipCoords.top = refs.sea.clientHeight - refs.ship.clientHeight;
+//     }
 
-  if (shipCoords.top + refs.ship.clientHeight > refs.sea.clientHeight) {
-    shipCoords.top = refs.sea.clientHeight - refs.ship.clientHeight 
-  }
-  
-  refs.ship.style.left = `${shipCoords.left}px`
-  refs.ship.style.top = `${shipCoords.top}px`
-}
-
+//     refs.ship.style.left = `${shipCoords.left}px`;
+//     refs.ship.style.top = `${shipCoords.top}px`;
+// }
