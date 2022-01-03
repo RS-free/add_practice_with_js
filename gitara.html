@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>piano</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/gitara.css"/>
+  </head>
+  <body>
+    <section>
+      <a class="back-link" href="./index.html">&#8592; back</a>
+      <ul class="key__list">
+          <li data-key="81" class="key__item">
+          <kbd>Q</kbd>
+          <span class="key__sound">saks1</span>
+        </li>
+        <li data-key="87" class="key__item">
+          <kbd>W</kbd>
+          <span class="key__sound">saks2</span>
+        </li>
+        <li data-key="69" class="key__item">
+          <kbd>E</kbd>
+          <span class="key__sound">saks3</span>
+        </li>
+        <li data-key="65" class="key__item">
+          <kbd>A</kbd>
+          <span class="key__sound">clap</span>
+        </li>
+        <li data-key="83" class="key__item">
+          <kbd>S</kbd>
+          <span class="key__sound">hihat</span>
+        </li>
+        <li data-key="68" class="key__item">
+          <kbd>D</kbd>
+          <span class="key__sound">kick</span>
+        </li>
+        <li data-key="70" class="key__item">
+          <kbd>F</kbd>
+          <span class="key__sound">openhat</span>
+        </li>
+        <li data-key="71" class="key__item">
+          <kbd>G</kbd>
+          <span class="key__sound">drum</span>
+        </li>
+        <li data-key="72" class="key__item">
+          <kbd>H</kbd>
+          <span class="key__sound">ride</span>
+        </li>
+        <li data-key="74" class="key__item">
+          <kbd>J</kbd>
+          <span class="key__sound">snare</span>
+        </li>
+        <li data-key="75" class="key__item">
+          <kbd>K</kbd>
+          <span class="key__sound">tom</span>
+        </li>
+        <li data-key="76" class="key__item">
+          <kbd>L</kbd>
+          <span class="key__sound">tink</span>
+        </li>
+      </ul>
+      <ul class="key__list">
+        <li data-key="90" class="key__item">
+          <kbd>Z</kbd>
+          <span class="key__sound">clap origin</span>
+        </li>
+        <li data-key="88" class="key__item">
+          <kbd>X</kbd>
+          <span class="key__sound">hihat origin</span>
+        </li>
+        <li data-key="67" class="key__item">
+          <kbd>C</kbd>
+          <span class="key__sound">kick origin</span>
+        </li>
+        <li data-key="86" class="key__item">
+          <kbd>V</kbd>
+          <span class="key__sound">openhat origin</span>
+        </li>
+        <li data-key="66" class="key__item">
+          <kbd>B</kbd>
+          <span class="key__sound">drum origin</span>
+        </li>
+        <li data-key="78" class="key__item">
+          <kbd>N</kbd>
+          <span class="key__sound">ride origin</span>
+        </li>
+        <li data-key="77" class="key__item">
+          <kbd>M</kbd>
+          <span class="key__sound">snare origin</span>
+        </li>
+        <li data-key="188" class="key__item">
+          <kbd>,</kbd>
+          <span class="key__sound">tom origin</span>
+        </li>
+        <li data-key="190" class="key__item">
+          <kbd>.</kbd>
+          <span class="key__sound">tink origin</span>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <audio data-key="81" src="./soungs/saksofon/na-saksofone-igraet-professional.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="87" src="./soungs/saksofon/uspokaivayuschiy-ritm-saksofona-otkryivayuschiy-fonovyiy-zvuk-38207.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="69" src="./soungs/saksofon/zvuchanie-saksofona.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="65" src="./soungs/gitara/bas-gitara-zvuk-zvuk-42332.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="83" src="./soungs/gitara/bass-gitara-skoljenie.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="68" src="./soungs/gitara/gitara-akkord-mi-may-emai-voshodyaschiy.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="70" src="./soungs/gitara/gitara-akkord-s-podtyajkoy.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="71" src="./soungs/gitara/gitara-interval-s-drayvom.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="72" src="./soungs/gitara/gitara-nejnoe-arpedjio.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="74" src="./soungs/gitara/gitara-odinochnyiy-blyuzovyiy.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="75" src="./soungs/gitara/gitara-odinochnyiy-vyisokiy.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="76" src="./soungs/gitara/gitara-s-distorshenom-odinochnyii-akkord-shumnyii-rezkii.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="90" src="./soungs/gitara/gitara-s-distorshenom-odinochnyii-akkord-yarkii-shumnyii.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="88" src="./soungs/gitara/gitara-s-distorshenom-odinochnyii-akkord-yarkii.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="67" src="./soungs/gitara/gitara-s-distorshenom-odinochnyii-aktivnyii-draivovyii.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="86" src="./soungs/gitara/gitara-s-distorshenom-odinochnyii-aktivnyii-rezkii-akkord.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="66" src="./soungs/gitara/gitara-s-distorshenom-shumnyii-zvonkii-rezkii.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="78" src="./soungs/gitara/gitara-solo-s-drayvom.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="77" src="./soungs/gitara/The Hardkiss - Кобра (feat. MONATIK).mp3"></audio>
+        </li>
+        <li>
+          <audio data-key="188" src="./soungs/gitara/gitara-akkord-re-major.wav"></audio>
+        </li>
+        <li>
+          <audio data-key="190" src="./soungs/gitara/gitara-akkordyi-rok-n-roll.wav"></audio>
+        </li>
+      </ul>
+    </section>
+    <script src="./js/gitara.js"></script>
+  </body>
+</html>

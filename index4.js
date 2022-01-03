@@ -99,9 +99,9 @@ refs.sea.addEventListener("click", onSeaClick);
 
 function onSeaClick(e) {
     const seaCoords = this.getBoundingClientRect();
-    console.log(e.clientY);
-    console.log(seaCoords.top);
-    console.log(refs.sea.clientTop);
+    // console.log(e.clientY);
+    // console.log(seaCoords.top);
+    // console.log(refs.sea.clientTop);
 
     const shipCoords = {
         top:
