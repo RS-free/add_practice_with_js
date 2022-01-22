@@ -88,14 +88,14 @@
 
 // generateForm();
 
-// задачка по кораблику, потрібну клікнути, щоб він переміщався
+// задачка по кораблику, потрібно клікнути, щоб він переміщався
 
 const refs = {
-    ship: document.querySelector("#ship"),
-    sea: document.querySelector("#sea"),
+    ship: document.querySelector('#ship'),
+    sea: document.querySelector('#sea'),
 };
 
-refs.sea.addEventListener("click", onSeaClick);
+refs.sea.addEventListener('click', onSeaClick);
 
 function onSeaClick(e) {
     const seaCoords = this.getBoundingClientRect();
