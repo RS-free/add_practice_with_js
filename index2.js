@@ -156,40 +156,40 @@
 // Если пользователь ввел что-то неверно, нужно повторить ввод этой информации.
 // По окончании конвертации спросить у пользователя хочет ли он произвести конвертацию еще раз. Если да - то повторить все о'и. Если нет - выполнить выход из программы.
 
-const currency = {
-  usd: {
-    rub: 71.85,
-    chf: 0.91,
-    eur: 0.86,
-    pln: 3.98,
-  },
-  rub: {
-    usd: 0.014,
-    chf: 0.013,
-    eur: 0.012,
-    pln: 0.056,
-  },
-  chf: {
-    usd: 1.09,
-    rub: 78.28,
-    eur: 0.94,
-    pln: 4.35,
-  },
-  eur: {
-    usd: 1.16,
-    rub: 82.99,
-    chf: 1.06,
-    pln: 4.61,
-  },
-  pln: {
-    usd: 0.25,
-    rub: 18,
-    chf: 0.23,
-    eur: 0.22,
-  },
-};
+// const currency = {
+//   usd: {
+//     rub: 71.85,
+//     chf: 0.91,
+//     eur: 0.86,
+//     pln: 3.98,
+//   },
+//   rub: {
+//     usd: 0.014,
+//     chf: 0.013,
+//     eur: 0.012,
+//     pln: 0.056,
+//   },
+//   chf: {
+//     usd: 1.09,
+//     rub: 78.28,
+//     eur: 0.94,
+//     pln: 4.35,
+//   },
+//   eur: {
+//     usd: 1.16,
+//     rub: 82.99,
+//     chf: 1.06,
+//     pln: 4.61,
+//   },
+//   pln: {
+//     usd: 0.25,
+//     rub: 18,
+//     chf: 0.23,
+//     eur: 0.22,
+//   },
+// };
 
-alert("На нашем сайте вы можете конвертировать валюты USD, RUB, CHF, EUR, PLN");
+alert('На нашем сайте вы можете конвертировать валюты USD, RUB, CHF, EUR, PLN');
 
 // const currencyToConvert = prompt("Яку валюти ви бажаєте обміняти?");
 
@@ -199,59 +199,58 @@ alert("На нашем сайте вы можете конвертировать
 let toConvertInfo = {};
 let price = 0;
 function toConvertCurrency() {
-  let currencyToConvert = prompt("Яку валюти ви бажаєте обміняти?");
-  const currencyToConvertModify = currencyToConvert.toLocaleLowerCase();
-  if (currency[currencyToConvertModify]) {
-    toConvertInfo = currency[currencyToConvertModify];
-    whichConvertCurrency(currencyToConvertModify);
-  } else {
-    alert("Ви ввели невірні дані!!!");
-    const tryAgain = confirm("Ви хочете спробувати знову?");
-    if (tryAgain) {
-      toConvertCurrency();
+    let currencyToConvert = prompt('Яку валюти ви бажаєте обміняти?');
+    const currencyToConvertModify = currencyToConvert.toLocaleLowerCase();
+    if (currency[currencyToConvertModify]) {
+        toConvertInfo = currency[currencyToConvertModify];
+        whichConvertCurrency(currencyToConvertModify);
+    } else {
+        alert('Ви ввели невірні дані!!!');
+        const tryAgain = confirm('Ви хочете спробувати знову?');
+        if (tryAgain) {
+            toConvertCurrency();
+        }
     }
-  }
 }
 
 function whichConvertCurrency(toConvert) {
-  let currencyWhichConvert = prompt(
-    `На яку валюту ви хочете обміняти ${toConvert}`
-  );
-  const currencyWhichConvertModify = currencyWhichConvert.toLocaleLowerCase();
-  if (toConvertInfo[currencyWhichConvertModify]) {
-    price = toConvertInfo[currencyWhichConvertModify];
-    convertsation(toConvert, currencyWhichConvertModify, price);
-  } else {
-    alert("Ви ввели невірні дані!!!");
-    const tryAgain = confirm("Ви хочете спробувати знову?");
-    if (tryAgain) {
-      toConvertCurrency();
+    let currencyWhichConvert = prompt(
+        `На яку валюту ви хочете обміняти ${toConvert}`
+    );
+    const currencyWhichConvertModify = currencyWhichConvert.toLocaleLowerCase();
+    if (toConvertInfo[currencyWhichConvertModify]) {
+        price = toConvertInfo[currencyWhichConvertModify];
+        convertsation(toConvert, currencyWhichConvertModify, price);
+    } else {
+        alert('Ви ввели невірні дані!!!');
+        const tryAgain = confirm('Ви хочете спробувати знову?');
+        if (tryAgain) {
+            toConvertCurrency();
+        }
     }
-  }
 }
 
 function convertsation(toConvert, currencyWhichConvertModify, price) {
-  let currencyСount = prompt("Кількість валюти?");
-  let currencyСountToNumber = Number(currencyСount);
-  if (!currencyСountToNumber) {
-    alert("Ви ввели невірні дані!!!");
-    const tryAgain = confirm("Ви хочете спробувати знову?");
-    if (tryAgain) {
-      toConvertCurrency();
+    let currencyСount = prompt('Кількість валюти?');
+    let currencyСountToNumber = Number(currencyСount);
+    if (!currencyСountToNumber) {
+        alert('Ви ввели невірні дані!!!');
+        const tryAgain = confirm('Ви хочете спробувати знову?');
+        if (tryAgain) {
+            toConvertCurrency();
+        }
     }
-  }
-  console.log("currencyСountToNumber", currencyСountToNumber);
-  console.log("price", price);
-  alert(
-    `${currencyСountToNumber} ${currencyWhichConvertModify} буде дорівнювати ${
-      currencyСountToNumber * price
-    } ${toConvert} по курсу ${price}`
-  );
-  const repeat = confirm("Ви хочете повторити операцію?");
-  if (repeat) {
-    toConvertCurrency();
-  }
+    console.log('currencyСountToNumber', currencyСountToNumber);
+    console.log('price', price);
+    alert(
+        `${currencyСountToNumber} ${currencyWhichConvertModify} буде дорівнювати ${
+            currencyСountToNumber * price
+        } ${toConvert} по курсу ${price}`
+    );
+    const repeat = confirm('Ви хочете повторити операцію?');
+    if (repeat) {
+        toConvertCurrency();
+    }
 }
 
 toConvertCurrency();
-
