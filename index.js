@@ -199,16 +199,15 @@
 // console.log(string1.endsWith('e'))
 // console.log(string2.endsWith('e'))
 
-const date = new Date();
-const time = date.getHours();
-console.log(time);
-if (time >= 7 && time <= 11) {
-  console.log("Доброе утро");
-} else if (time >= 11 && time <= 16) {
-  console.log("добрый день");
-} else if (time >= 16 && time <= 20) {
-  console.log("добрый вечер");
-} else {
-  console.log("Доброй ночи");
-}
-
+// const date = new Date();
+// const time = date.getHours();
+// console.log(time);
+// if (time >= 7 && time <= 11) {
+//   console.log("Доброе утро");
+// } else if (time >= 11 && time <= 16) {
+//   console.log("добрый день");
+// } else if (time >= 16 && time <= 20) {
+//   console.log("добрый вечер");
+// } else {
+//   console.log("Доброй ночи");
+// }
